@@ -1,3 +1,50 @@
+<!DOCTYPE html>
 <html>
-<h1>Hlelo </h1>
-<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Javscript</h1>
+
+  <h2>Varibale</h2>
+  <pre>
+    diffrent between var, let and const    
+  </pre>
+Certainly! Here are some examples to illustrate the differences between `let`, `const`, and `var`:
+
+Example 1: Using `let`
+```javascript
+let x = 10;
+if (true) {
+  let x = 20;
+  console.log(x); // Output: 20 (inner scope value)
+}
+console.log(x); // Output: 10 (outer scope value)
+```
+In this example, `let` is used to declare the variable `x` both inside and outside the `if` block. The `let` declaration inside the block creates a new variable `x` with a value of 20, which is only accessible within the block. The `let` declaration outside the block refers to a separate variable `x` with a value of 10, which is accessible outside the block.
+
+Example 2: Using `const`
+```javascript
+const PI = 3.14;
+console.log(PI); // Output: 3.14
+
+PI = 3.14159; // Throws an error: Assignment to constant variable.
+```
+In this example, `const` is used to declare the constant `PI` with a value of 3.14. The value of `PI` cannot be reassigned, so attempting to assign a new value (`3.14159`) to `PI` will result in an error.
+
+Example 3: Using `var`
+```javascript
+var y = 10;
+if (true) {
+  var y = 20;
+  console.log(y); // Output: 20 (inner scope value)
+}
+console.log(y); // Output: 20 (outer scope value)
+```
+In this example, `var` is used to declare the variable `y` both inside and outside the `if` block. The `var` declaration inside the block updates the value of the existing variable `y` in the outer scope to 20. Therefore, both the inner and outer `console.log` statements will output 20.
+
+It's important to note that `let` and `const` were introduced in ES6 to address some of the scoping issues and inconsistencies associated with `var`. They provide more predictable behavior and better block scoping, making them preferable choices in modern JavaScript development.
+
+</body>
+</html>
